@@ -38,3 +38,27 @@ class Player {
 }
 
 // Write function below
+
+function balloonAttack(p1, p2) {
+  const tie = 'tie';
+  const p1Wins = `${p1.name} wins!`;
+  const p2Wins = `${p2.name} wins!`;
+  const gameDuration = 10;
+  const ballonsHitByP1 = p1.hitsPerMinute * gameDuration;
+  const ballonsHitByP2 = p2.hitsPerMinute * gameDuration;
+  const p1BalloonCount = p1.balloonCount - ballonsHitByP2;
+  const p2BalloonCount = p2.balloonCount - ballonsHitByP1;
+
+  return p1BalloonCount === p2BalloonCount ?
+    tie :
+    p1BalloonCount > p2BalloonCount ?
+      p1Wins :
+      p2Wins;
+
+}
+
+
+const p1 = new Player('p1', 11);
+const p2 = new Player('p2', 12);
+
+console.log(balloonAttack(p1, p2));
