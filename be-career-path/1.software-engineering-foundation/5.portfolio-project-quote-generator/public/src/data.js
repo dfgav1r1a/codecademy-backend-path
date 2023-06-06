@@ -1,0 +1,30 @@
+
+const quotes = [
+    {author:'Bob Marley' , quote: '“Emancipate yourselves from mental slavery. None but ourselves can free our minds.”'},
+    {author: 'Bob Dylan', quote: '“Don\'t criticize what you can\'t understand.”' },
+    {author: 'Billy Joel', quote: '“If you are not doing what you love, you are wasting your time.”'},
+    {author: 'Jimi Hendrix', quote: '“The story of life is quicker than the wink of an eye, the story of love is hello and goodbye... until we meet again”'},
+    {author: 'Gerard Way', quote: '“Would you destroy Something perfect in order to make it beautiful?”'},
+    {author: 'Bob Marley', quote: '“Get up, stand up, Stand up for your rights. Get up, stand up, Don\'t give up the fight.”'},
+    {author: 'John Lennon', quote: '“We all shine on... like the moon and the stars and the sun... we all shine on... come on and on and on...”'},
+    {author: 'Paul McCartney', quote: '“Close your eyes and I\'ll kiss you, Tomorrow I\'ll miss you.”'},
+    {author: 'John Lennon', quote: '“I get by with a little help from my friends.”'},
+    {author: 'Sylvia Plath', quote: '“If they substituted the word \'Lust\' for \'Love\' in the popular songs it would come nearer the truth.”'},
+    {author: 'Alanis Morissette', quote: '“When pain brings you down, don\'t be silly, don\'t close your eyes and cry, you just might be in the best position to see the sun shine.”'},
+    {author: 'Jimi Hendrix', quote: '“Excuse me while I kiss the sky.”'},
+    {author: 'George Carlin', quote: '“Oh Beautiful for smoggy skies, insecticided grain,\nFor strip-mined mountain\'s majesty above the asphalt plain. America, America, man sheds his waste on thee, And hides the pines with billboard signs, from sea to oily sea.”'},
+    {author: 'Gustavo Cerati', quote: 'Being able to say goodbye is a sign of growth.'},
+    {author: 'John Lennon', quote: '“Remember to let her into your heart.”'},
+    {author: 'Bob Dylan', quote: '“I gave her my heart but she wanted my soul...”'},
+    {author: 'Janis Joplin', quote: '“Don\'t compromise yourself. You are all you\'ve got.”'},
+    {author: 'Morrissey', quote: '“I called to wish you an unhappy birthday because you\'re evil and you lie and if you should die I may feel slightly sad, but I won\'t cry.”'},
+    {author: 'John Lennon', quote: "“There's nothing you can do that can't be done”"},
+    {author: 'Bon Jovi', quote: '“Take my hand and we\'ll make it - I swear”'},
+    {author: 'Gerard Way', quote: '“I\'m just a man, not a hero. just a boy, who wants to sing this song.”'},
+    {author: 'Jim Morrison', quote: 'People fear death even more than pain.'},
+    {author: 'Jonny Lang', quote: '“I truly loved you, but now I\'m walking away”'},
+    {author: 'Jim Morrison', quote: 'Whoever controls the media, controls the mind.'},
+    {author: 'Gerard Way', quote: '“I know something you don\'t... and that is... I\'M NOT WEARING ANY UNDERWEAR! We\'re gonna get sexy for a minute!”'},
+];
+
+export default quotes

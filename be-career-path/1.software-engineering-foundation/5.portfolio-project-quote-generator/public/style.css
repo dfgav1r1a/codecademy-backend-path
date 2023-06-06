@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Orbitron&family=Plus+Jakarta+Sans&family=Rubik+Mono+One&display=swap');
+
+html {
+    background-image: url('./src/images/alejandro-ortiz-rock-concert.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    margin: 10px auto;
+    background-color: #877c7c;
+    opacity: 0.95;
+    width: 85%;
+    min-height: 540px;
+    max-height: inherit;
+    border-radius: 10px;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.intro {
+    display: flex;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.intro * {
+    margin: 0;
+    padding: 5px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.intro h1 {
+    font-size: 3em;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.intro h3 {
+    align-self: center;
+    flex-grow: 1;
+    text-align: end;
+}
+
+.intro  p {
+    font-family: 'Rubik Mono One', sans-serif;
+    margin: 20px 70px;
+    text-align: justify;
+}
+
+.intro button {
+    background-color: #f10001;
+    color: #080000;
+    font-size: 1.3em;
+    border-radius: 5px;
+}
+
+.intro button:hover {
+    background-color: #080000;
+    color: whitesmoke;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.quote {
+    background-color: black;
+    border-radius: 10px;
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    height: 350px;
+}
+
+.picContainer {
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    width: 75%;
+    height: 75%;
+    opacity: 0.5;
+}
+
+.textContainer {
+    position: relative;
+    text-align: right;
+    width: 75%;
+    max-height: max-content;
+    top: -40%;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.phraseText {
+    margin: 0;
+    font-size: 1.5em;
+    font-family: 'Acme', sans-serif;
+}
+
+.authorText {
+    font-style: italic;
+}
