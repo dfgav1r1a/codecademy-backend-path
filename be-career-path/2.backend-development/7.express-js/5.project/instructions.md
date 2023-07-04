@@ -56,6 +56,7 @@ This route should verify that both properties exist in the request query string 
 
 8. If you’d like to extend your app, here are some ideas to try, but you can also try out your own:
 
+<<<<<<< HEAD
 - Add a PUT route for updating quotes in the data. This might require adding some sort of unique ID for each quote in the array in data.js.
 
 - Add a DELETE route for deleting quotes from the data array. As with PUT, this might require adding IDs to the data array and using req.params. For both of these ideas, you’ll be able to interact via Postman.
@@ -65,3 +66,14 @@ This route should verify that both properties exist in the request query string 
 - Add another resource to your API in addition to quotes, such as biographical blurbs (you’ll need to find your own data for this new resource). Use Express Routers to keep your code simple and separated into different files for each router.
 
 For most of these ideas, you might need to look into the front-end code in the public/ folder. If you’re not as familiar with front-end JavaScript, try our [Build Interactive JavaScript Websites](https://www.codecademy.com/learn/build-interactive-websites) course and the Requests section of our [Introduction to JavaScript course](https://www.codecademy.com/learn/introduction-to-javascript).
+=======
+Add a PUT route for updating quotes in the data. This might require adding some sort of unique ID for each quote in the array in data.js.
+
+Add a DELETE route for deleting quotes from the data array. As with PUT, this might require adding IDs to the data array and using req.params. For both of these ideas, you’ll be able to interact via Postman.
+
+Add other data to the array, such as the year of each quote, and try to display it on the front-end.
+
+Add another resource to your API in addition to quotes, such as biographical blurbs (you’ll need to find your own data for this new resource). Use Express Routers to keep your code simple and separated into different files for each router.
+
+For most of these ideas, you might need to look into the front-end code in the public/ folder. If you’re not as familiar with front-end JavaScript, try our Build Interactive JavaScript Websites course and the Requests section of our Introduction to JavaScript course.
+>>>>>>> origin
