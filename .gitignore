@@ -1,5 +1,9 @@
 #node-modules
-./be-career-path/2.backend-development/3.challenge-find-hat/node_modules
+be-career-path/2.backend-development/3.challenge-find-hat/node_modules
 #solution
-./be-career-path/2.backend-development/3.challenge-find-hat/solution
-./be-career-path/2.backend-development/3.challenge-find-hat/find-your-hat-solution.zip
+be-career-path/2.backend-development/3.challenge-find-hat/solution
+be-career-path/2.backend-development/3.challenge-find-hat/find-your-hat-solution.zip
+# quotes api
+be-career-path/2.backend-development/7.express-js/5.project/node_modules
+
+.gitignore

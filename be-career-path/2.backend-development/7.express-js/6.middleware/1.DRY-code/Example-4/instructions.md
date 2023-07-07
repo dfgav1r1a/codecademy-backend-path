@@ -1,0 +1,1 @@
+1. Refactor the current application to use an app.param to handle all routes with snackId. It should set the req.snackIndex if it exists and send the proper 404 response if not. Make sure to fix all routes to use the req.snackIndex and remove duplicate code.
