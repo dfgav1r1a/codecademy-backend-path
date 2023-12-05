@@ -1,0 +1,29 @@
+GET http://localhost:4001/api/ideas HTTP/1.1
+
+###
+
+GET http://localhost:4001/api/ideas/2 HTTP/1.1
+
+
+###
+POST http://localhost:4001/api/ideas HTTP/1.1
+Content-Type: application/json 
+
+{
+    "name": "sexy minions for the minions",
+    "description": "To give some laidback fun for the minions",
+    "weeklyRevenue": 3000,
+    "numWeeks": 30 
+}
+
+###
+
+PUT http://localhost:4001/api/ideas/2 HTTP/1.1
+Content-Type: application/json 
+
+{
+    "name": "A new idea for more money",
+    "description": "A money making idea",
+    "weeklyRevenue": 3000,
+    "numWeeks": 30 
+}
