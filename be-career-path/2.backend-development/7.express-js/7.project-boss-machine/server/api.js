@@ -24,8 +24,6 @@ apiRouter.post('/minions', (req, res, next) => {
 apiRouter.put('/minions/:minionId', (req, res, next) => {
     const id = req.params.minionId;
     const {title, name, weaknesses, salary} = req.body;
-    const minionToUpdate = db.getFromDatabaseById('minions', id);
-    console.log(minionToUpdate);
     const updatedMinionObj = {
         id : id,
         name: name,
