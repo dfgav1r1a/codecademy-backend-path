@@ -21,9 +21,27 @@ apiRouter.post('/minions', (req, res, next) => {
     res.status(201).send(createdMinion)
 });
 
+apiRouter.put('/minions/:minionId', (req, res, next) => {
+    const id = req.params.minionId;
+    const {title, name, weaknesses, salary} = req.body;
+    const minionToUpdate = db.getFromDatabaseById('minions', id);
+    console.log(minionToUpdate);
+    const updatedMinionObj = {
+        id : id,
+        name: name,
+        title: title,
+        weaknesses: weaknesses,
+        salary: salary
+    }
+    const updatedMinion = db.updateInstanceInDatabase('minions', updatedMinionObj);
+    console.log(updatedMinion);
+    res.status(200).send(updatedMinion);
+});
+
 apiRouter.delete('/minions/:minionId', (req, res, next) => {
     const id = req.params.minionId;
     const toDelete = db.deleteFromDatabasebyId('minions', id);
     !toDelete ? res.status(400).send('There is no minion to kill!') : res.status(200).send('Minion was eliminated and nobody noticed')
 })
+
 module.exports = apiRouter;
