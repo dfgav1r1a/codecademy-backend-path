@@ -1,0 +1,9 @@
+GET http://localhost:4001/api/meetings HTTP/1.1
+
+###
+
+POST http://localhost:4001/api/meetings HTTP/1.1
+
+###
+
+DELETE http://localhost:4001/api/meetings HTTP/1.1
