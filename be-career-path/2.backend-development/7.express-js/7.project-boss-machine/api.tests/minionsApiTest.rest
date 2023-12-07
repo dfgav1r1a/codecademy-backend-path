@@ -44,3 +44,36 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:4001/api/minions/1 HTTP/1.1
+
+###
+#test for work API
+
+GET http://localhost:4001/api/minions/5/work HTTP/1.1
+
+###
+
+GET http://localhost:4001/api/work HTTP/1.1
+
+###
+ 
+POST http://localhost:4001/api/minions/1/work HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":,
+    "description":,
+    "hours":,
+    "minionId":
+}
+
+###
+
+POST http://localhost:4001/api/minions/1/work/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":,
+    "description":,
+    "hours":,
+    "minionId":
+}

@@ -11,14 +11,12 @@ apiRouter.get('/minions', (req, res, next) => {
 apiRouter.get('/minions/:minionId', (req, res, next) => {
     const id = req.params.minionId;
     const minion = db.getFromDatabaseById('minions', id);
-    console.log(minion);
     minion ? res.status(200).send(minion)
            : res.status(404).send('Minion does not exist')
 });
 
 apiRouter.post('/minions', (req, res, next) => {
     const newMinion = req.body;
-    console.log(newMinion);
     const createdMinion = db.addToDatabase('minions', newMinion)
     res.status(201).send(createdMinion)
 });
@@ -50,7 +48,75 @@ apiRouter.delete('/minions/:minionId', (req, res, next) => {
     const toDelete = db.deleteFromDatabasebyId('minions', id);
     !toDelete ? res.status(404).send('There is no minion to kill!')
         : res.status(204).send('Minion was eliminated and nobody noticed')
-})
+});
+
+//work API
+
+apiRouter.get('/minions/:minionId/work', (req, res, next) => {
+    const id = req.params.minionId;
+    const isFound = db.getFromDatabaseById('minions', id);
+    if (!isFound) {
+        res.status(404).send('The minion does not exist');
+    } else {
+        const allWork = db.getAllFromDatabase('work');
+        const minionDuties = allWork.filter(work => work.minionId === id);
+        res.status(200).send(minionDuties);
+    }
+});
+
+apiRouter.post('/minions/:minionId/work', (req, res, next) => {
+   const id = req.params.minionId;
+    const isFound = db.getFromDatabaseById('minions', id);
+    if (!isFound) {
+        res.status(404).send('The minion does not exist');
+    } else {
+        const {title, description, hours} = req.body;
+        const newDuty = {
+            title: title,
+            description: description,
+            hours: hours,
+            minionId: id
+        };
+        const newWork = db.addToDatabase('work', newDuty);
+        res.status(201).send(newWork);
+    }
+});
+
+apiRouter.put('/minions/:minionId/work/:workId', (req, res, next) => {
+    const minionId = req.params.minionId;
+    const workId = req. params.workId;
+    const isFound = db.getFromDatabaseById('minions', minionId);
+    const workFound = db.getFromDatabaseById('work', workId);
+    if (!isFound) {
+        res.status(404).send('The minion does not exist');
+    } else if (!workFound) {
+        res.status(404).send('The minion was found but, it does not have assigned that job');
+    } else {
+        const {title, description, hours} = req.body;
+        const updatedWork = {
+            id: workId,
+            title: title,
+            description: description,
+            hours: hours,
+            minionId: minionId 
+        };
+        const toDb = db.updateInstanceInDatabase('work', updatedWork);
+        res.status(201).send(toDb);
+    }
+});
+
+apiRouter.delete('/minions/:minionId/work/:workId', (req, res, next) => {
+    const minionId = req.params.minionId;
+    const workId = req. params.workId;
+    const isFound = db.getFromDatabaseById('minions', minionId);
+    const workFound = db.getFromDatabaseById('work', workId);
+    if (isFound && workFound) {
+        db.deleteFromDatabasebyId('work', workId);
+        res.status(204).send();
+    } else {
+        res.status(404).send('There is nothing to delete');
+    }
+});
 
 //ideas API
 apiRouter.get('/ideas', (req, res, next) => {
@@ -68,7 +134,7 @@ apiRouter.get('/ideas/:ideaId', (req, res, next) => {
 apiRouter.post('/ideas', (req, res, next) => {
     const newIdea = db.addToDatabase('ideas', req.body);
     !newIdea ? res.status(400).send('Something went wrong, please try again')
-             : res.status(201).send(newIdea);
+        : res.status(201).send(newIdea);
 });
 
 apiRouter.put('/ideas/:ideaId', (req, res, next) => {
@@ -105,8 +171,8 @@ apiRouter.get('/meetings', (req, res, next) => {
 });
 
 apiRouter.post('/meetings', (req, res, next) => {
-    const meetingObj= db.createMeeting();
-    const newMeeting= db.addToDatabase('meetings', meetingObj);
+    const meetingObj = db.createMeeting();
+    const newMeeting = db.addToDatabase('meetings', meetingObj);
     res.status(201).send(newMeeting);
 });
 
